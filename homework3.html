@@ -20,11 +20,12 @@
       var article = vowels.includes(element.substring(0, 1)) ? "an" : "a";
       return element = article + " " + element;
     });
-    var randComp = randomInt(companies.length);
-    var randAnimal = randomInt(animals.length);
+
+    var randComp = 0;
+    var randAnimal = 0;
     for (var i = 0; i < 20; i++) {
-      var randComp = randomInt(companies.length);
-      var randAnimal = randomInt(animals.length);
+      randComp = randomInt(companies.length);
+      randAnimal = randomInt(animals.length);
       console.log("My company is " + companies[randComp] + " for " + animals[randAnimal] + "!");
     }
   </script>
