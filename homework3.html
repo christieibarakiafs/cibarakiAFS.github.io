@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <script type="text/javascript">
+    var companies = ["Google", "Apple", "Uber", "Yelp", "Venmo", "Waze", "Instagram",
+      "Etsy", "Bumble", "Seamless", "Snapchat", "Slack", "Spotify",
+      "Netflix", "Fitbit", "YouTube", "Twitter", "Evernote", "Headspace"
+    ];
+    var animals = ["llamas", "otters", "wallabies", "porgs", "baby hippos", "bunnies",
+      "dinosaurs", "giraffes", "kitties", "lambs", "puffer fish", "red pandas",
+      "hedgehogs", "teacup pigs", "doges", "donkeys"
+    ];
+    var vowels = ["A", "E", "I", "O", "U"];
+
+    function randomInt(int) {
+      return Math.floor(Math.random() * int);
+    }
+    companies = companies.map(function(element) {
+      var article = vowels.includes(element.substring(0, 1)) ? "an" : "a";
+      return element = article + " " + element;
+    });
+    var randComp = randomInt(companies.length);
+    var randAnimal = randomInt(animals.length);
+    for (var i = 0; i < 20; i++) {
+      var randComp = randomInt(companies.length);
+      var randAnimal = randomInt(animals.length);
+      console.log("My company is " + companies[randComp] + " for " + animals[randAnimal] + "!");
+    }
+  </script>
+</body>
+
+</html>
