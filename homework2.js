@@ -1,13 +1,9 @@
-// 14 January 2018 - Homework 2
-
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Triangle Calculator</title>
-  <meta charset="utf-8">
-</head>
 <body>
-  <script type="text/javascript">var userInput = prompt("Provide values for the three sides of a triangle, separated by commas, e.g.: a,b,c");
+  <script type="text/javascript">
+
+  	var userInput = prompt("Provide values for the three sides of a triangle, separated by commas, e.g.: a,b,c");
 
 	var inputArray = userInput.split(",");
 	var sideA = parseInt(inputArray[0]);
@@ -34,6 +30,6 @@
 
 	console.log(heronsFormula(sideA, sideB, sideC));
 	console.log(heronsFormula(5, 6, 7));
-</script>
+	</script>
 </body>
 </html>
