@@ -1,0 +1,11 @@
+* {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.hidden {
+  display: none;
+}
+
+.notHidden {
+  display: all;
+}
