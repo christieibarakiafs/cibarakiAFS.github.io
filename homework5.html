@@ -1,0 +1,64 @@
+	<!DOCTYPE html>
+	<html>
+	<body>
+	  <script type="text/javascript">
+		 function Puppy(name, breed) {
+		  this.name = cleanName(name);
+		  this.breed = cleanName(breed);
+		  this.foods = [];
+
+		  function cleanName(aName) {
+		    return (
+		      aName.substring(0, 1).toUpperCase() +
+		      aName.substring(1, aName.length).toLowerCase()
+		    );
+		  }
+		    
+		  this.getFoodString = function(){   
+		    var sentence = "I eat ";
+		     if(this.foods.length < 1){
+		       sentence = sentence + "nothing! I'm hungry :(";
+		     }else if(this.foods.length ===2 ){
+		       sentence = sentence + this.foods[0] + " and " + this.foods[1] +"!";
+		     }else{
+		       sentence = sentence + this.foods[0];
+		       for(i = 1; i < this.foods.length; i++){
+		         sentence = sentence + ", " + (i===(this.foods.length-1)? "and " : "") + this.foods[i];
+		       }
+		       sentence = sentence + "!";
+		     }  
+		    return sentence;
+		  }
+
+		  this.introduce = function() {
+		    console.log("HI, I'm " + this.name + " the " + this.breed + "!");
+		    console.log(this.getFoodString());
+		  };
+
+		  this.eatSomething = function(food) {
+		    this.foods.push(food);
+		  };
+		}
+
+		var myPuppy = new Puppy("llama", "westie");
+
+		myPuppy.introduce();
+		myPuppy.eatSomething("fish");
+		myPuppy.eatSomething("potatoes");
+		myPuppy.eatSomething("rice");
+		console.log(myPuppy.foods);
+		myPuppy.introduce();
+
+		var yourPuppy = new Puppy("Spider", "Corgie");
+		console.log(yourPuppy["name"]);
+		yourPuppy.eatSomething("gummy sharks");
+		yourPuppy.eatSomething("brussels sprouts");
+		yourPuppy.introduce();
+
+		var lostPuppy = new Puppy("Renly", "terrier");
+		lostPuppy.introduce();
+		lostPuppy.eatSomething("scraps");
+		lostPuppy.introduce();
+		</script>
+	</body>
+	</html>
