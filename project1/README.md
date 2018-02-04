@@ -11,7 +11,7 @@
 (to turn him off, type "off")
 
 ## Greeting the printer!
-*If the user input contains the token "hey", "hiii", "hello", "what's up", or "greetings", the printer will return a random element from its greeting list. E.g. you could say "oh hey" or "hey girl hey", and the printer would recognize it as a greeting. If you greet the printer too many times, he'll get tired and only respond with "Yes?"
+* If the user input contains the token "hey", "hiii", "hello", "what's up", or "greetings", the printer will return a random element from its greeting list. E.g. you could say "oh hey" or "hey girl hey", and the printer would recognize it as a greeting. If you greet the printer too many times, he'll get tired and only respond with "Yes?"
 * Opportunity for improvement: the regex checks for the presence of the token anywhere in the string, but it would be better if it checked that the token isn't prececed by another letter OR followed by a letter (unless it's a repeat of the last letter). E.g. the current implementation would treat "they" and "hey" as greetings, since they both contain the "hey" token."They" is not okay but "heyyyyyyy" is.
 
 ## Question and answer
