@@ -134,7 +134,7 @@ body {
   padding-bottom: 20px;
   text-align: right;
   color: #E3F2FD;
-  background: #000 url("https://cibarakiafs.github.io/project1/printer.jpg");
+  background: #000 url('https://cibarakiafs.github.io/project1/printer.jpg');
 
   /*background-size: 50px 50px;*/
   background-repeat: no-repeat;
